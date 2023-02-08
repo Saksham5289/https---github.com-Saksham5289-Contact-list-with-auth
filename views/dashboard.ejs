@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= locals.title %>
+    </title>
+    <script src="https://kit.fontawesome.com/abfb08943c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+
+</head>
+<body>
+    
+    <h1  class="page-heading ">
+        <i class="fa-solid fa-address-book white"></i>
+        Contact List</h1>
+
+    <div class="contact-list"> 
+        
+            <%
+            for (let i of contact_list)
+            {
+                %>
+                
+                <div class="case">
+              
+                <div class="contact-details">
+                
+                     <p class="contact-name"><%= i.name %></p>
+                    <p class="contact-number"><%= i.phone %></p>
+
+                    <p class="adder-details"><span>Added by -</span> <%= i.user.name%></p>
+
+                </div>
+
+                <% if(locals.user) {
+                    %>
+                    <div class="delete">
+               <p>
+                <a href="/dashboard/delete-contact/?kurkure=<%= i._id %>"
+                    <i class="fa-solid fa-trash-can"></i>
+               </a>
+               </p>
+                
+
+            </div><%
+                } %>
+            
+
+        </div>
+           
+                
+                <!-- <a href="/dashboard/delete-contact/?phone=<%= i.phone %>&name=<%=i.name%> "
+                    <i class="fa-solid fa-tablet-button"></i>
+                </a> -->
+                <!-- this was the query params  -->
+           
+        
+                <%
+            }
+            
+            %>
+    </div>
+    
+    <% if(locals.user){
+        %>
+
+        <div class="form">
+
+<form action="/dashboard/create-contact" method="post">
+    <input type="text" name="name" placeholder="Enter name" class="input-name" required>
+    <input type="number" name="phone" placeholder="Enter phone" class="input-contact" required>
+
+    <button type="submit" class="btn">Add Contact</button>
+</form>
+<a href="/users/logout" class="btn btn-secondary my-4">Logout</a>
+        <p class="creator">Created by -<%=locals.user.name%></p>
+        <%
+    } %>
+   
+
+<script src="/js/home.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/abfb08943c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

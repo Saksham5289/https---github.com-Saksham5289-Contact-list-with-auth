@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container
+{
+    max-width: 800px;
+    margin: auto;
+}
+
+.white{
+    color: white;
+}
+
+.page-heading{
+    background-color: #008060;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+.contact-name{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.contact-number{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.contact-list{
+    margin-top: 30px;
+}
+
+.form{
+    margin-top: 60px;
+
+}
+
+.input-name{
+    padding: 8px;
+    border: solid 2px black;
+    font-family: 'Times New Roman', Times, serif;
+    width: 143px;
+    border-radius: 5px; 
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+.input-contact{
+    padding: 8px;
+    border: solid 2px black;
+    font-family: 'Times New Roman', Times, serif;
+    width: 137px;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.btn{
+    border: 2px solid black;
+    background-color:  #008060;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.contact-details{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.delete{
+    color: black;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+
+
+.case{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width:300px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+
+
+p a{
+    color: black;
+}
+
+
+.creator{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+}
